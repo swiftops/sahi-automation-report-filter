@@ -1,0 +1,6 @@
+flask
+nose
+requests
+connexion
+pymongo
+python-consul

@@ -12,8 +12,8 @@ To run this script we need to installed the python 3.6.0 or above. After that ne
 ##### Checkout Repository
 Checkout project code from git.
 ```
-$git clone http://gitserver.digite.in/devops-MS/MS-AutomationResultService.git
-$git clone http://gitserver.digite.in/devops-MS/MS-AutomationResult.git
+$git clone https://github.com/swiftops/sahi-automation-report-filter.git
+$git clone https://github.com/swiftops/sahi-automation-result-parser.git
 ```
 ##### Configuration
 You have to specify your CONSUL_IP and CONSUL_PORT in system.properties file which is present at root directory.
@@ -24,15 +24,19 @@ To run microservice we need to go to root directory from command line. For Examp
 We have project in D drive then we should run as below.
 ```
 For getSahiFailedSummary
-   D:\MS-AutomationResultService>python service.py
+   D:\GitHub\sahi-automation-report-filter>python service.py
 For sahi_report_filter
-   D:\MS-AutomationResult>python service.py
+   D:\GitHub\sahi-automation-result-parser>python service.py
 ```  
 ### How to Uses
 For Sahi automation result parser microservice use below url and pass relaese and build through post method.
 ```
-   http://localhost:7778/sahi_report_filter
+   http://localhost:7778/sahifailedresult \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: c2d4816d-defd-4de6-9af9-0aa581c3c755' \
+  -H 'cache-control: no-cache' \
+  -d '"sahifailedresult release;build"'
 ```
 where
-* release is like. 4.0.0, 3.0.0, 4.2.0 ect.
+* release is like. 4_0_0, 3_0_0, 4_2_0 ect.
 * build 1,2,3,4,5,6 ect.

@@ -1,5 +1,5 @@
 # Sahi automation report filter microservice
-### Indoduction
+### Introduction
 This is a plugin for SwiftOps Bot Engine. It calls the getSahiFailedSummary microservice which define in **Sahi automation result parser microservice**.
 
 ### Assumption
